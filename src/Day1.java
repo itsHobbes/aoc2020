@@ -6,7 +6,7 @@ public class Day1 {
     private static final int TARGET = 2020;
 
     public static void main(String[] args) throws Exception {
-        var list = FileReader.readLines("day1.txt");
+        var list = FileReader.readInts("day1.txt");
         System.out.println(part1(list));
         System.out.println(part2(list));
     }
