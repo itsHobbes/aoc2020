@@ -11,24 +11,12 @@ public class Day2 {
         System.out.println(part2(list));
     }
 
-    public static int part1(List<PasswordPolicy> policies) {
-        int counter = 0;
-        for (PasswordPolicy passwordPolicy : policies) {
-            if (passwordPolicy.isValid()) {
-                counter++;
-            }
-        }
-        return counter;
+    public static long part1(List<PasswordPolicy> policies) {
+        return policies.stream().filter(PasswordPolicy::isValid).count();
     }
 
-    public static int part2(List<PasswordPolicy> policies) {
-        int counter = 0;
-        for (PasswordPolicy passwordPolicy : policies) {
-            if (passwordPolicy.isValidPart2()) {
-                counter++;
-            }
-        }
-        return counter;
+    public static long part2(List<PasswordPolicy> policies) {
+        return policies.stream().filter(PasswordPolicy::isValidPart2).count();
     }
 
 }
