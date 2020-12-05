@@ -17,6 +17,7 @@ public class Day4 {
 
     public static long part2(List<String> list) {
         List<Passport> passports = validate1(list);
+        passports.stream().filter(Passport::isValid).forEach(s -> System.out.println(s.toString()));
         return passports.stream().filter(Passport::isValid).count();
     }
 
