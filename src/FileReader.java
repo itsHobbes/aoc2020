@@ -27,4 +27,8 @@ public class FileReader {
         return (List<Integer>) readLines(file, Integer::parseInt);
     }
 
+    public static List<Long> readLongs(String file) {
+        return (List<Long>) readLines(file, Long::parseLong);
+    }
+
 }
